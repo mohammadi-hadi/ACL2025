@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <meta name="description" content="Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation">
+  <meta property="og:title" content="Assessing the Reliability of LLMs Annotations"/>
+  <meta property="og:description" content="Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation"/>
+  <meta property="og:url" content="https://arxiv.org/abs/2507.13138"/>
+  <meta property="og:image" content="static/images/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Assessing the Reliability of LLMs Annotations">
+  <meta name="twitter:description" content="Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation">
+  <meta name="keywords" content="LLM, Demographic Bias, Model Explanation, NLP, Sexism Detection, Annotation Reliability, XAI, Fairness, Generative AI, Mixed Effects Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Assessing the Reliability of LLMs Annotations</title>
+  <link rel="icon" type="image/x-icon" href="static/images/ACL.svg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 200px;
+      height: 50px;
+    }
+    
+    .personal-section {
+      padding: 2rem 0;
+      background-color: #f8f9fa;
+    }
+    
+    .personal-image {
+      width: 400px;
+      height: 350px;
+      border-radius: 15%;
+      object-fit: cover;
+      border: 1px solid #ffffff;
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .personal-bio {
+      text-align: left;
+      line-height: 1.6;
+    }
+    
+    .personal-bio h3 {
+      color: #3273dc;
+      margin-bottom: 1rem;
+    }
+    
+    /* Mobile responsive styles */
+    @media screen and (max-width: 768px) {
+      .header-logo {
+        width: 150px;
+        height: 40px;
+        top: 10px;
+        left: 10px;
+      }
+      
+      .personal-section {
+        padding: 3rem 0 1rem 0;
+        margin-top: 60px;
+      }
+      
+      .personal-image {
+        width: 250px;
+        height: 220px;
+        margin-bottom: 1rem;
+      }
+      
+      .personal-bio {
+        text-align: center;
+        padding: 0 1rem;
+      }
+      
+      .personal-bio h3 {
+        text-align: center;
+      }
+    }
+    
+    /* Image alignment improvements */
+    .centered-img {
+      display: block;
+      margin: 0 auto;
+    }
+    
+    .small-img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Carousel image improvements */
+    .carcon img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ACL 2025 Logo in top-left corner -->
+  <img src="static/images/acl2025-logo.png" alt="ACL 2025" class="header-logo">
+
+  <!-- Personal Information Section -->
+  <section class="personal-section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered is-vcentered">
+        <div class="column is-4-tablet is-3-desktop has-text-centered">
+          <img src="static/images/Hadi Mohammadi.jpg" alt="Hadi Mohammadi" class="personal-image">
+        </div>
+        <div class="column is-8-tablet is-9-desktop">
+          <div class="personal-bio">
+            <h3 class="title is-4">About Me</h3>
+            <p>
+              I’m Hadi Mohammadi, a<b> final-year PhD candidate</b> at <a href="https://www.uu.nl/" target="_blank">Utrecht University</a>, specializing in <b>Explainable Natural Language Processing (NLP)</b> within the social sciences. My research focuses on building transparent and interpretable NLP models that bridge the gap between cutting-edge AI and real-world applications, empowering domain experts to better understand and trust model outputs.
+            </p>
+            <p>
+              With over <b>6 years of experience in data science</b> and machine learning—including more than <b>3 years in the Netherlands</b>—I have secured €38,400 in research funding and published my work in leading venues such as ACL, ECAI, and <i>Applied Sciences</i>. My research interests include explainable AI, fairness in machine learning, human–AI collaboration, and leveraging large language models (LLMs) to explore cultural and moral variations across societies.
+            </p>            
+            <p>
+              You can learn more about my work on my <a href="https://mohammadi-hadi.github.io/" target="_blank">personal website</a> and view my <a href="static/Hadi Mohammadi CV.pdf" target="_blank">CV here</a>.
+            </p>
+            <p>
+              One of my most recent research papers in NLP was accepted at the <b>GeBNLP Workshop</b> at <b>ACL 2025</b>:
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title">Assessing the Reliability of LLMs Annotations</h1> -->
+            <h2 class="title is-2 publication-title">Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation</h2>
+            <div class="column has-text-centered">
+              <h6 class="title is-4 publication-title">ACL 2025</h6>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b>Hadi Mohammad<sup>1</sup></b>, Tina Shahedi<sup>1</sup>, Pablo Mosteiro<sup>1</sup>, Massimo Poesio<sup>2</sup>, Ayoub Bagheri<sup>1</sup>, Anastasia Giachanou<sup>1</sup></span><br>
+              <span class="author-block"><sup style="font-size: 0.7em;">1</sup>
+Department of Methodology and Statistics, Utrecht University</b></span><br>
+              <span class="author-block"><sup style="font-size: 0.7em;">2</sup>
+Queen Mary University of London, London, United Kingdom</span><br>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="./static/ACL2025.pdf"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2507.13138"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- You may update the teaser image if you have a new one for this paper -->
+        <img src="./static/images/1.png" class="centered-img small-img">
+        </img>
+        <h2 class="subtitle has-text-centered">
+          <b>Figure 1.</b> We instruct LLMs to replicate human annotations for subjective NLP tasks from different perspectives using persona prompting and XAI techniques.</b>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            Understanding the sources of variability in annotations is crucial for developing fair NLP systems, especially for tasks like sexism detection where demographic bias is a concern. This study investigates the extent to which annotator demographic features influence labeling decisions compared to text content. Using a Generalized Linear Mixed Model, we quantify this influence, finding that while statistically present, demographic factors account for a minor fraction (~8%) of the observed variance, with tweet content being the dominant factor. We then assess the reliability of Generative AI (GenAI) models as annotators, specifically evaluating if guiding them with demographic personas improves alignment with human judgments. Our results indicate that simplistic persona prompting often fails to enhance, and sometimes degrades, performance compared to baseline models. Furthermore, explainable AI (XAI) techniques reveal that model predictions rely heavily on content-specific tokens related to sexism, rather than correlates of demographic characteristics. We argue that focusing on content-driven explanations and robust annotation protocols offers a more reliable path towards fairness than potentially persona simulation. 
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div style="max-width: 800px; width: 100%; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+          <h2 class="title is-3">Key Findings</h2>
+          <ul style="padding-left: 20px; text-align: left;">
+            <li>- Gender and age group do not significantly influence labeling decisions.</li>
+            <li>- Black annotators are far more likely to label tweets as sexist, and Latino annotators are less likely to do so compared to White annotators.</li>
+            <li>- Annotators with a high school degree are significantly less likely to label tweets as sexist.</li>
+            <li>- Annotators from Africa are significantly less likely to label tweets as sexist.</li>
+          </ul>
+          <h2 class="title is-4" style="margin-top: 2em;">GenAI Results</h2>
+          <ul style="padding-left: 20px; text-align: left;">
+            <li>- Baseline GenAI models show strong performance on this task.</li>
+            <li>- Adding demographic persona information provides inconsistent benefits for improving annotation reliability.</li>
+            <li>- Guiding model attention using XAI based on content features shows more consistent improvements. This approach is especially effective when combined with capable models.</li>
+            <li>- Focusing on the text itself through XAI methods appears more promising than relying on potentially superficial persona simulation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You may update or remove the following sections if not relevant to the new paper -->
+  <section class="hero is-small is-light">
+    <div class="container is-max-desktop ">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Mixed-effect Model </h2>
+          <img src="./static/images/2.png">
+          </img>
+          <div class="content has-text-justified">
+            We ran a mixed-effects logistic regression model to understand how annotators’ demographic features affect their labeling decisions. 
+
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <section class="section is-small is-light">
+    <div class="container is-max-desktop ">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">BERT Model</h2>
+          <img src="./static/images/3.png">
+          </img>
+          <div class="content has-text-justified">
+            <ul>
+                <li>We fine-tuned a multilingual BERT model for sexism detection, using class weights to handle label imbalances and early stopping to prevent overfitting.</li>
+                <li>We evaluate the reliability of GenAI models as annotators, including the effect of persona prompting and XAI-guided explanations.</li>
+                <li>We analyze the impact of demographic and content features on model predictions and annotation reliability.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Image carousel (optional, update images if relevant to new paper) -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="carcon">
+          <img src="static/images/4.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/5.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/6.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/7.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/8.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+        <div class="carcon">
+          <img src="static/images/9.png" alt="Sample" class="centered-img small-img"/>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <!-- Update this caption or remove the carousel if not relevant to the new paper -->
+        Example results or figures from the study (update or replace as needed).
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<!-- Paper poster -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Paper</h2>
+      <iframe  src="static/ACL2025.pdf" width="100%" height="400">
+          </iframe>
+      </div>
+    </div>
+  </section>
+<!--End paper poster -->
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{mohammadi2025assessing,
+  title={Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation},
+  author={Mohammadi, Hadi and Shahedi, Tina and Mosteiro, Pablo and Poesio, Massimo and Bagheri, Ayoub and Giachanou, Anastasia},
+  booktitle={The 6th Workshop on Gender Bias in Natural Language Processing},
+  pages={92},
+  year={2025}
+}
+</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/parsa-ra" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
