@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use materials from this project page, please cite the paper below."
+title: "Assessing the Reliability of LLMs Annotations — Project Page"
+type: software
+license: MIT
+repository-code: "https://github.com/mohammadi-hadi/ACL2025"
+url: "https://mohammadi-hadi.github.io/ACL2025/"
+authors:
+  - family-names: "Mohammadi"
+    given-names: "Hadi"
+    affiliation: "Utrecht University"
+preferred-citation:
+  type: conference-paper
+  title: "Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation"
+  year: 2025
+  collection-title: "The 6th Workshop on Gender Bias in Natural Language Processing"
+  start: 92
+  url: "https://arxiv.org/abs/2507.13138"
+  authors:
+    - family-names: "Mohammadi"
+      given-names: "Hadi"
+      affiliation: "Utrecht University"
+    - family-names: "Shahedi"
+      given-names: "Tina"
+      affiliation: "Utrecht University"
+    - family-names: "Mosteiro"
+      given-names: "Pablo"
+      affiliation: "Utrecht University"
+    - family-names: "Poesio"
+      given-names: "Massimo"
+      affiliation: "Queen Mary University of London"
+    - family-names: "Bagheri"
+      given-names: "Ayoub"
+      affiliation: "Utrecht University"
+    - family-names: "Giachanou"
+      given-names: "Anastasia"
+      affiliation: "Utrecht University"
