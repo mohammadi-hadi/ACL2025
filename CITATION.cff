@@ -8,6 +8,7 @@ url: "https://mohammadi-hadi.github.io/ACL2025/"
 authors:
   - family-names: "Mohammadi"
     given-names: "Hadi"
+    orcid: "https://orcid.org/0000-0003-0860-9200"
     affiliation: "Utrecht University"
 preferred-citation:
   type: conference-paper
@@ -19,6 +20,7 @@ preferred-citation:
   authors:
     - family-names: "Mohammadi"
       given-names: "Hadi"
+      orcid: "https://orcid.org/0000-0003-0860-9200"
       affiliation: "Utrecht University"
     - family-names: "Shahedi"
       given-names: "Tina"
