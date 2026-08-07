@@ -14,6 +14,7 @@ preferred-citation:
   type: conference-paper
   title: "Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation"
   year: 2025
+  doi: "10.18653/v1/2025.gebnlp-1.9"
   collection-title: "The 6th Workshop on Gender Bias in Natural Language Processing"
   start: 92
   url: "https://arxiv.org/abs/2507.13138"
