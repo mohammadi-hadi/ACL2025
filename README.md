@@ -16,7 +16,7 @@
 |                  |                                                                          |
 | ---------------- | ------------------------------------------------------------------------ |
 | **Title**        | Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation |
-| **Authors**      | Hadi Mohammadi, Tina Shahedi, Pablo Mosteiro, Massimo Poesio, Ayoub Bagheri, Anastasia Giachanou |
+| **Authors**      | Hadi Mohammadi, Tina Shahedi, Pablo Mosteiro, Massimo Poesio, Robert A. Bagheri, Anastasia Giachanou |
 | **Affiliation**  | Utrecht University; Queen Mary University of London |
 | **Venue**        | 6th Workshop on Gender Bias in Natural Language Processing (GeBNLP), ACL 2025 |
 | **arXiv**        | [2507.13138](https://arxiv.org/abs/2507.13138) |
@@ -33,7 +33,7 @@ The page itself is plain HTML/CSS/JavaScript built on the Bulma-based academic p
 ```bibtex
 @inproceedings{mohammadi2025assessing,
   title={Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation},
-  author={Mohammadi, Hadi and Shahedi, Tina and Mosteiro, Pablo and Poesio, Massimo and Bagheri, Ayoub and Giachanou, Anastasia},
+  author={Mohammadi, Hadi and Shahedi, Tina and Mosteiro, Pablo and Poesio, Massimo and Bagheri, Robert A. and Giachanou, Anastasia},
   booktitle={The 6th Workshop on Gender Bias in Natural Language Processing},
   pages={92},
   year={2025}
