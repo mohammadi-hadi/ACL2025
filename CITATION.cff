@@ -17,6 +17,7 @@ preferred-citation:
   doi: "10.18653/v1/2025.gebnlp-1.9"
   collection-title: "The 6th Workshop on Gender Bias in Natural Language Processing"
   start: 92
+  end: 104
   url: "https://arxiv.org/abs/2507.13138"
   authors:
     - family-names: "Mohammadi"

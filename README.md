@@ -35,7 +35,7 @@ The page itself is plain HTML/CSS/JavaScript built on the Bulma-based academic p
   title={Assessing the Reliability of LLMs Annotations in the Context of Demographic Bias and Model Explanation},
   author={Mohammadi, Hadi and Shahedi, Tina and Mosteiro, Pablo and Poesio, Massimo and Bagheri, Robert A. and Giachanou, Anastasia},
   booktitle={The 6th Workshop on Gender Bias in Natural Language Processing},
-  pages={92},
+  pages={92--104},
   year={2025}
 }
 ```
